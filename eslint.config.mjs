@@ -10,7 +10,16 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.config({
+    extends: ["next", "next/core-web-vitals", "next/typescript"],
+    plugins: ["eslint-plugin-barrel-files"],
+    rules: {
+      semi: ["error"],
+      quotes: ["error", "double"],
+      indent: ["error", 2],
+      "barrel-files/avoid-re-export-all": "error"
+    },
+  }),
 ];
 
 export default eslintConfig;
