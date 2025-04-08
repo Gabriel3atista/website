@@ -8,9 +8,9 @@ import { Button } from "@/components/atoms/button";
 
 export function AppHeader() {
   return (
-    <header className="relative w-full h-16 px-2 md:px-4">
+    <header className="relative w-full h-16 px-4">
       <div className="sticky top-4 w-full h-12 p-px bg-gradient-to-b from-[#DAE0F6] to-[#b1bbdf] rounded-xl overflow-hidden">
-        <div className="w-full h-full flex items-center bg-gradient-to-b from-[#FFFFFF] via-[#FFFFFF] to-[#e2e5f0] rounded-[11px]">
+        <div className="w-full h-full flex items-center bg-gradient-to-b from-[#FFFFFF] via-[#FFFFFF] to-[#e9ecf5] rounded-[11px]">
           <div className="max-w-6xl flex items-center justify-between mx-auto w-full px-2">
             <div className="flex items-end">
               <span className="leading-none font-semibold text-black">G</span>

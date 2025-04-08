@@ -8,7 +8,6 @@ interface CardProps {
   title?: string;
   size?: Extract<Sizes, "sm" | "md">;
   className?: string;
-  noPadding?: boolean;
 }
 
 const cardSize: Record<NonNullable<CardProps["size"]>, string> = {
