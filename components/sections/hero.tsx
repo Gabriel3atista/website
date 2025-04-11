@@ -104,12 +104,12 @@ export function Hero() {
                     <span 
                       className={clsx(
                         "absolute -start-[11px] w-5 h-5 flex items-center justify-center rounded-full ring-4 ring-white",
-                        skill.learning ? "bg-blue-500" : "bg-emerald-500"
+                        skill.learning ? "bg-blue-500" : "bg-emerald-500",
                       )}>
                       <NextIcon 
                         className={clsx(
                           "text-white",
-                          skill.learning && "animate-spin"
+                          skill.learning && "animate-spin",
                         )}
                         name={
                           skill.learning 

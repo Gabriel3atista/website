@@ -1,6 +1,6 @@
 services:
   frontend:
-    container_name: agenda-site
+    container_name: website
     build: 
       context: .
       dockerfile: Dockerfile

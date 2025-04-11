@@ -1,13 +1,14 @@
 import "@/app/tailwind.css";
 import "@/styles/globals.scss";
+import "@/styles/gradient-blur.css";
 
 import type { Metadata } from "next";
-
 import { Geist } from "next/font/google";
+import clsx from "clsx";
 
 import { AppHeader } from "@/components/core/app-header";
-import clsx from "clsx";
 import { Container } from "@/components/core/container";
+import { AppFooter } from "@/components/core/app-footer";
 
 const geist = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
             <main className="flex-1 w-full">
               {children}
             </main>
+            <AppFooter />
           </div>
         </Container>
       </body>

@@ -17,7 +17,8 @@ const eslintConfig = [
       semi: ["error"],
       quotes: ["error", "double"],
       indent: ["error", 2],
-      "barrel-files/avoid-re-export-all": "error"
+      "barrel-files/avoid-re-export-all": "error",
+      "comma-dangle": ["error", "always-multiline"],
     },
   }),
 ];

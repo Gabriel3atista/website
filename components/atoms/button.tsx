@@ -19,7 +19,7 @@ import { NextIcon } from "@/components/atoms/next-icon";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: {
-    color?: Variants;
+    color?: Extract<Variants, "blue" | "black" | "white" | "red">;
     type?: "solid" | "ghost" | "text" | "outline" | "soft";
   };
   size?: Sizes;
@@ -38,36 +38,7 @@ const buttonVariant: {
     [T in Required<NonNullable<ButtonProps["variant"]>>["type"]]: string;
   };
 } = {
-  primary: {
-    solid: `
-      text-primary-contrast
-      bg-primary hover:bg-primary-hover active:bg-primary-active
-      focus-visible:outline-primary-50
-    `,
-    outline: `
-      text-primary
-      hover:bg-primary-10 active:bg-primary-20
-      focus-visible:outline-primary-50
-      border border-solid border-primary-20
-    `,
-    ghost: `
-      text-primary hover:text-primary-contrast
-      focus-visible:outline-primary-30
-      hover:bg-primary
-    `,
-    text: `
-      text-primary !px-0 !h-fit
-      focus-visible:outline-primary-50
-    `,
-    soft: `
-    text-yellow-600
-    bg-primary-10 hover:bg-primary-20
-    active:bg-primary-30
-    border border-solid border-primary-20
-    focus-visible:outline-primary-50
-  `,
-  },
-  secondary: {
+  blue: {
     solid: `
       text-white
       bg-secondary hover:bg-secondary-hover active:bg-secondary-active
@@ -155,66 +126,7 @@ const buttonVariant: {
       focus-visible:outline-white/50
     `,
   },
-  danger: {
-    solid: `
-      text-white
-      bg-rose-500 hover:bg-rose-600 active:bg-rose-700
-      focus-visible:outline-rose-500/50
-    `,
-    outline: `
-      text-rose-500
-      hover:bg-rose-500/10 active:bg-rose-500/20
-      focus-visible:outline-rose-500/50
-      border border-solid border-rose-500/20
-    `,
-    ghost: `
-      text-rose-500
-      hover:bg-rose-500/10
-      focus-visible:outline-rose-500/50
-    `,
-    text: `
-      text-rose-500 !px-0 !h-fit
-      focus-visible:outline-rose-500/50
-    `,
-    soft: `
-      text-rose-500
-      bg-rose-500/10 hover:bg-rose-500/20
-      border border-solid border-rose-500/20
-      active:bg-rose-500/30
-      focus-visible:outline-rose-500/50
-    `,
-  },
-  // TODO(Gabriel): Change the new colors
-  success: {
-    solid: `
-      text-white
-      bg-rose-500 hover:bg-rose-600 active:bg-rose-700
-      focus-visible:outline-rose-500/50
-    `,
-    outline: `
-      text-rose-500
-      hover:bg-rose-500/10 active:bg-rose-500/20
-      focus-visible:outline-rose-500/50
-      border border-solid border-rose-500/20
-    `,
-    ghost: `
-      text-rose-500
-      hover:bg-rose-500/10
-      focus-visible:outline-rose-500/50
-    `,
-    text: `
-      text-rose-500 !px-0 !h-fit
-      focus-visible:outline-rose-500/50
-    `,
-    soft: `
-      text-rose-500
-      bg-rose-500/10 hover:bg-rose-500/20
-      border border-solid border-rose-500/20
-      active:bg-rose-500/30
-      focus-visible:outline-rose-500/50
-    `,
-  },
-  warning: {
+  red: {
     solid: `
       text-white
       bg-rose-500 hover:bg-rose-600 active:bg-rose-700
@@ -295,7 +207,7 @@ export const Button = ({
       className={clsx(
         "flex items-center font-medium rounded-md cursor-pointer active:scale-[0.97] active:translate-y-[2px] transition-all duration-150 outline-none focus-visible:outline-[3px] focus-visible:outline-offset-0",
         className,
-        buttonVariant[variant?.color ?? "secondary"][variant?.type ?? "solid"],
+        buttonVariant[variant?.color ?? "black"][variant?.type ?? "solid"],
         buttonSizes[size],
         buttonGaps[size],
         buttonWidths[size],
