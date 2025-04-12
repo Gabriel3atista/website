@@ -1,8 +1,11 @@
+"use client";
+
 import { Card } from "@/components/atoms/card";
-import { NextIcon } from "@/components/atoms/next-icon";
+// import { NextIcon } from "@/components/atoms/next-icon";
 import { Badge } from "@/components/atoms/badge";
 import Image from "next/image";
 import Link from "next/link";
+import { NextIcon } from "../atoms/next-icon";
 
 const projects: {
   title: string;
