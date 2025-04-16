@@ -79,7 +79,7 @@ export function AppHeader() {
               <Button
                 variant={{ color: "black" }}
                 size="sm"
-                href="#"
+                href="mailto:gabriel3atista@gmail.com"
                 iconLeft="tabler:mail-filled"
               >
                 Contact
