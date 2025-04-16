@@ -18,7 +18,7 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "Gabriel Batista",
-  description: "A Software Engineer from Curitiba",
+  description: "Crafting Code, Shaping Innovation and delivering seamless digital experiences.",
 };
 
 export default function RootLayout({
