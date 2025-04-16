@@ -66,7 +66,7 @@ export function Hero() {
           <h2 className="text-[10vw] md:text-7xl leading-none">Well, hello buddy</h2>
           <h2 className="text-black text-[10vw] md:text-7xl leading-none">I{"'"}m Gabriel Batista</h2>
         </div>
-        <Image className="-mt-4 xs:-mt-6 md:-mt-8" src="/me.png" width={569} height={626} alt="" />
+        <Image className="-mt-4 xs:-mt-6 md:-mt-8 pointer-events-none" src="/me.png" width={569} height={626} alt="" />
       </div>
       <div className="w-full px-4 pb-4 md:pl-4 md:pb-0 md:pr-0 md:absolute z-30 md:bottom-24 lg:bottom-48 md:w-96">
         <Card>
@@ -100,7 +100,7 @@ export function Hero() {
             <ol className="flex flex-col gap-4 relative border-l border-dashed border-gray-300">
               {
                 skills.map(skill => (
-                  <li key={skill.title} className="flex flex-col ml-4">
+                  <li key={skill.title} className="flex flex-col ml-5">
                     <span 
                       className={clsx(
                         "absolute -start-[11px] w-5 h-5 flex items-center justify-center rounded-full ring-4 ring-white",
