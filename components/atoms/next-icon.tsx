@@ -19,7 +19,7 @@ const sizes: Record<NonNullable<NextIconProps["size"]>, string> = {
   sm: "text-xl",
   md: "text-xl",
   lg: "text-2xl",
-  xl: "text-2xl"
+  xl: "text-2xl",
 };
 
 export function NextIcon ({ className, ...props }: NextIconProps) {
